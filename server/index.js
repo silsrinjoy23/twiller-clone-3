@@ -2,7 +2,7 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
-const uri = "mongodb+srv://silsrinjoy23:dSePcgW1Y1hHKg2M@cluster0.uaqheti.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "";
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const admin = require("firebase-admin");
@@ -22,12 +22,12 @@ function sendOtpSms(phone, otp) {
     },
     {
       headers: {
-        authorization: "736ysxLa4nFIuHDSfBVzRPh1OZCm5oqEQAc2KvJrWYU0eki9lGPutrxepckEJUQgRIFH2aNMbjnqD6BT", // 🔁 Replace this
+        authorization: "", 
         "Content-Type": "application/json",
       },
     }
   ).then(res => {
-    console.log("Fast2SMS response:", res.data); // ✅ Add this
+    console.log("Fast2SMS response:", res.data); 
     return res;
   }).catch(err => {
     console.error("Fast2SMS error:", err?.response?.data || err.message);
@@ -36,7 +36,7 @@ function sendOtpSms(phone, otp) {
 }
 
 // ✅ DIRECTLY set your Gemini API key here (be careful not to push this to GitHub)
-const genAI = new GoogleGenerativeAI("AIzaSyADK4CCmpBuQj8CNKFpHxEtRasEVBUs1jQ");
+const genAI = new GoogleGenerativeAI("");
 
 const port = 5000;
 
@@ -51,8 +51,8 @@ admin.initializeApp({
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "silmina1981@gmail.com", // 🔁 Replace with your Gmail
-    pass: "ftlu hwet dopf kfap",    // 🔁 Replace with Gmail app password
+    user: "", // 🔁 Replace with your Gmail
+    pass: "",    // 🔁 Replace with Gmail app password
   },
 });
 
