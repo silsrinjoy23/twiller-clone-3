@@ -2,7 +2,7 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const express = require("express");
 const cors = require("cors");
-const uri = "";
+const uri = "";//mongo uri
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const admin = require("firebase-admin");
@@ -22,7 +22,7 @@ function sendOtpSms(phone, otp) {
     },
     {
       headers: {
-        authorization: "", 
+        authorization: "", //fast2sms api key
         "Content-Type": "application/json",
       },
     }
@@ -35,7 +35,7 @@ function sendOtpSms(phone, otp) {
   });
 }
 
-// ✅ DIRECTLY set your Gemini API key here (be careful not to push this to GitHub)
+// ✅  set your Gemini API key here (be careful not to push this to GitHub)
 const genAI = new GoogleGenerativeAI("");
 
 const port = 5000;
