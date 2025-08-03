@@ -1,0 +1,197 @@
+/* .sidebar {
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.3;
+    position: inherit;
+    min-width: 150px;
+    margin-top: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+  }
+  
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .sidebar__twitterIcon {
+    color: var(--twitter-color);
+    font-size: 35px !important;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar__tweet {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-top: 10px !important;
+  }
+  
+  .sidebar>.Profile__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-radius: 9999px;
+    padding: 10px;
+  }
+  
+  .user__info {
+    margin-left: 10px;
+  }
+  
+  .subUser__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .user__info>h4 {
+    font-size: 14px;
+  }
+  
+  .user__info>h5 {
+    opacity: 50%;
+  }
+  
+  @media screen and (max-width:688px) {
+    .sidebar {
+      display: none;
+    }
+  } */
+
+  /*  */
+  .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--twitter-background);
+  flex: 0.3;
+  min-width: 150px;
+  padding: 20px 10px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Twitter icon */
+.sidebar__twitterIcon {
+  color: var(--twitter-color);
+  font-size: 35px !important;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+/* Tweet Button */
+  .sidebar__tweet {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-top: 10px !important;
+  }
+
+/* User Info Section */
+.sidebar > .Profile__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 9999px;
+}
+
+.user__info h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.user__info h5 {
+  font-size: 12px;
+  color: gray;
+  margin: 0;
+}
+
+/* 🔸 MOBILE VIEW — SIDEBAR becomes TOPBAR */
+@media screen and (max-width: 688px) {
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 999;
+    border-right: none;
+    border-bottom: 1px solid var(--twitter-background);
+    padding: 0 10px;
+    background-color: white;
+  }
+
+  .sidebar__twitterIcon {
+    margin: 0;
+    font-size: 28px !important;
+  }
+
+  .sidebar__tweet {
+    height: 38px;
+    padding: 0 12px;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .Profile__info {
+    display: none;
+  }
+}
+
+/* 🔸 TABLETS */
+@media screen and (min-width: 689px) and (max-width: 1024px) {
+  .sidebar {
+    flex: 0.2;
+    padding: 20px 10px;
+  }
+
+  .sidebar__tweet {
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .user__info h4 {
+    font-size: 13px;
+  }
+
+  .user__info h5 {
+    font-size: 11px;
+  }
+}
+
+/* 🔸 SMALL LAPTOPS */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .sidebar {
+    flex: 0.25;
+    padding: 20px 15px;
+  }
+}
+
+/* 🔸 DESKTOP */
+@media screen and (min-width: 1367px) {
+  .sidebar {
+    flex: 0.3;
+    padding: 20px 20px;
+  }
+}
